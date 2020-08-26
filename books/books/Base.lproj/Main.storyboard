@@ -15,55 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbu-9q-Z7l">
-                                <rect key="frame" x="20" y="99" width="374" height="30"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="yqt-oL-Yx2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Favorieten">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N04-Sj-BM3"/>
-                                    <action selector="buttonTappedWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bVN-pG-LuS"/>
-                                    <segue destination="aR7-TA-xOI" kind="show" id="sYP-a8-P8K"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4h-Sp-oim">
-                                <rect key="frame" x="20" y="149" width="374" height="30"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="dbB-KY-NGy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Wachlijst ">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GYf-P3-ssc"/>
-                                    <action selector="buttonTappedWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bs0-pp-uVr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ym-1B-ZWX">
-                                <rect key="frame" x="20" y="199" width="374" height="30"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="aMv-UK-vCN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Gelezen boeken">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IdC-rE-ZIk"/>
-                                    <action selector="buttonTappedWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yx1-Os-qQs"/>
-                                </connections>
-                            </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3jF-Og-6dh">
                                 <rect key="frame" x="1" y="35" width="414" height="44"/>
                                 <items>
@@ -73,16 +24,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="K4h-Sp-oim" firstAttribute="top" secondItem="Vbu-9q-Z7l" secondAttribute="bottom" constant="20" id="5UI-Is-Pbd"/>
-                            <constraint firstItem="Vbu-9q-Z7l" firstAttribute="top" secondItem="3jF-Og-6dh" secondAttribute="bottom" constant="20" id="AXH-kl-cJl"/>
                             <constraint firstItem="3jF-Og-6dh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-9" id="DYE-oB-Jy0"/>
-                            <constraint firstItem="Vbu-9q-Z7l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FvL-Qe-D0t"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vbu-9q-Z7l" secondAttribute="trailing" constant="20" id="HRM-4v-WYc"/>
-                            <constraint firstItem="K4h-Sp-oim" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MZi-fv-q4h"/>
-                            <constraint firstItem="6Ym-1B-ZWX" firstAttribute="top" secondItem="K4h-Sp-oim" secondAttribute="bottom" constant="20" id="VSn-Yb-K0N"/>
-                            <constraint firstItem="6Ym-1B-ZWX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aZ3-2Y-hG4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K4h-Sp-oim" secondAttribute="trailing" constant="20" id="d2j-hn-g9I"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Ym-1B-ZWX" secondAttribute="trailing" constant="20" id="eYA-iw-Qwx"/>
                             <constraint firstItem="3jF-Og-6dh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="1" id="eq5-BU-tJw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3jF-Og-6dh" secondAttribute="trailing" constant="-21" id="f3w-xC-Rij"/>
                         </constraints>
@@ -93,14 +35,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="882.60869565217399" y="-459.375"/>
+            <point key="canvasLocation" x="670" y="-1007"/>
+        </scene>
+        <!--Gelezen-->
+        <scene sceneID="zSl-iL-4nr">
+            <objects>
+                <viewController id="XdF-wn-UkX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nto-RQ-UEL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2mK-at-CMv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Gelezen" id="OIb-WF-l92"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="VLn-hC-m2S"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Gelezen" image="text.bubble" catalog="system" id="Gdb-4B-lCD"/>
+                    <navigationItem key="navigationItem" id="ueY-uf-eVr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="80H-fI-pgz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="-275"/>
         </scene>
         <!--Favorieten-->
         <scene sceneID="DYI-Bg-VG5">
             <objects>
                 <viewController id="aR7-TA-xOI" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GKI-Gh-2nf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kew-AP-EDZ">
@@ -119,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7dW-pu-3Ff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2164" y="-459"/>
+            <point key="canvasLocation" x="1570" y="-275"/>
         </scene>
         <!--Zoeken-->
         <scene sceneID="r2t-QZ-jRu">
@@ -133,7 +101,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Zoek Boek" id="cJL-M7-6fz"/>
+                                    <navigationItem title="Zoeken" id="cJL-M7-6fz"/>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -145,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bs4-H9-PAm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-239" y="376"/>
+            <point key="canvasLocation" x="1571" y="-1007"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="H5T-cb-HpH">
@@ -160,19 +128,45 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Db5-zQ-UWV"/>
                         <segue destination="HVf-0F-rMh" kind="relationship" relationship="viewControllers" id="m17-Ao-QyK"/>
                         <segue destination="aR7-TA-xOI" kind="relationship" relationship="viewControllers" id="Rns-Tu-lEA"/>
+                        <segue destination="XdF-wn-UkX" kind="relationship" relationship="viewControllers" id="cl8-YF-LAq"/>
+                        <segue destination="6xh-1s-GwX" kind="relationship" relationship="viewControllers" id="5CA-Mk-Chz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3lu-Wj-FNf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-238" y="-459"/>
         </scene>
+        <!--Wachtrij-->
+        <scene sceneID="U5R-l0-vh4">
+            <objects>
+                <viewController id="6xh-1s-GwX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ce3-MF-7o9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PYx-Kf-ltX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Wachtrij" id="aha-4X-6XG"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="E0G-On-zKs"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Wachtrij" image="arrowshape.turn.up.right" catalog="system" id="N2n-g6-8wp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qys-Xn-smK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2430" y="-275"/>
+        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="sYP-a8-P8K"/>
-    </inferredMetricsTieBreakers>
     <resources>
+        <image name="arrowshape.turn.up.right" catalog="system" width="128" height="106"/>
         <image name="book" catalog="system" width="128" height="101"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="text.bubble" catalog="system" width="128" height="110"/>
     </resources>
 </document>
