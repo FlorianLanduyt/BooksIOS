@@ -7,14 +7,23 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Book: Decodable {
+class Book: Object, Decodable {
     var id: String = ""
     var volumeInfo: VolumInfo
     
     enum CodingKeys : String, CodingKey{
         case id = "Id"
         case volumeInfo = "VolumeInfo"
+    }
+    
+    override class func primaryKey() -> String? {
+        return "Id"
+    }
+
+    required init() {
+        super.init()
     }
     
     required init(from decoder: Decoder) throws {
