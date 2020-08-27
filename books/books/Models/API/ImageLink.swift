@@ -9,15 +9,21 @@
 import Foundation
 
 class ImageLink: Decodable {
-    var thumbnailURL: String
+    var thumbnailURL: String?
     
     enum CodingKeys: String, CodingKey {
         case thumbnailURL = "Thumbnail"
     }
     
-    required init(from decoder: Decoder) throws {
+    init(thumbnailURL: String) {
+        self.thumbnailURL = thumbnailURL
+    }
+    
+     required init(from decoder: Decoder) throws {
         let valueContainer = try decoder.container(keyedBy: CodingKeys.self)
         
         self.thumbnailURL = try valueContainer.decode(String.self, forKey: CodingKeys.thumbnailURL)
     }
+    
+    
 }

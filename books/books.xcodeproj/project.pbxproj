@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		4F6F4BA924F7CBA9009E7687 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6F4BA824F7CBA9009E7687 /* Book.swift */; };
 		4F6F4BAB24F7CBDC009E7687 /* VolumeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6F4BAA24F7CBDC009E7687 /* VolumeInfo.swift */; };
 		4F6F4BAD24F7CBEB009E7687 /* ImageLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6F4BAC24F7CBEB009E7687 /* ImageLink.swift */; };
+		4F6F4BB224F8091E009E7687 /* BookDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6F4BB124F8091E009E7687 /* BookDatabase.swift */; };
 		6A76C8922FF57EBA632D5EE4 /* Pods_books.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357436228F727A48483AF6A3 /* Pods_books.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		4F6F4BA824F7CBA9009E7687 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		4F6F4BAA24F7CBDC009E7687 /* VolumeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeInfo.swift; sourceTree = "<group>"; };
 		4F6F4BAC24F7CBEB009E7687 /* ImageLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLink.swift; sourceTree = "<group>"; };
+		4F6F4BB124F8091E009E7687 /* BookDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDatabase.swift; sourceTree = "<group>"; };
 		AA06B14FCB501CD27523B8FA /* Pods-books.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-books.debug.xcconfig"; path = "Target Support Files/Pods-books/Pods-books.debug.xcconfig"; sourceTree = "<group>"; };
 		BB05C7981E199C32B5B9DEDF /* Pods-books.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-books.release.xcconfig"; path = "Target Support Files/Pods-books/Pods-books.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +91,7 @@
 		4F6F4B8324F5779F009E7687 /* books */ = {
 			isa = PBXGroup;
 			children = (
+				4F6F4BAE24F807A0009E7687 /* Database */,
 				4F6F4BA424F7C999009E7687 /* Controllers */,
 				4F6F4BA124F70552009E7687 /* Models */,
 				4F6F4B9C24F6F9E4009E7687 /* ViewControllers */,
@@ -117,10 +120,8 @@
 		4F6F4BA124F70552009E7687 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4F6F4BA224F705D5009E7687 /* BookResponse.swift */,
-				4F6F4BA824F7CBA9009E7687 /* Book.swift */,
-				4F6F4BAA24F7CBDC009E7687 /* VolumeInfo.swift */,
-				4F6F4BAC24F7CBEB009E7687 /* ImageLink.swift */,
+				4F6F4BB024F807CD009E7687 /* Database */,
+				4F6F4BAF24F807C4009E7687 /* API */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -133,13 +134,38 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		4F6F4BAE24F807A0009E7687 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		4F6F4BAF24F807C4009E7687 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				4F6F4BA224F705D5009E7687 /* BookResponse.swift */,
+				4F6F4BAA24F7CBDC009E7687 /* VolumeInfo.swift */,
+				4F6F4BAC24F7CBEB009E7687 /* ImageLink.swift */,
+				4F6F4BA824F7CBA9009E7687 /* Book.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		4F6F4BB024F807CD009E7687 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				4F6F4BB124F8091E009E7687 /* BookDatabase.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		B6FF83BCC7BFF5190B2FCA97 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				AA06B14FCB501CD27523B8FA /* Pods-books.debug.xcconfig */,
 				BB05C7981E199C32B5B9DEDF /* Pods-books.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F6F4BB224F8091E009E7687 /* BookDatabase.swift in Sources */,
 				4F6F4B8924F5779F009E7687 /* YourBooksController.swift in Sources */,
 				4F6F4B8524F5779F009E7687 /* AppDelegate.swift in Sources */,
 				4F6F4B9B24F6F9AE009E7687 /* FavoriteBooksController.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchBooksController: UIViewController {
+class SearchBooksController: UITableViewController, UISearchResultsUpdating {
 
     override func viewDidLoad() {
         super.viewDidLoad()
