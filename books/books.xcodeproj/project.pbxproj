@@ -23,6 +23,7 @@
 		4F6F4BAB24F7CBDC009E7687 /* VolumeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6F4BAA24F7CBDC009E7687 /* VolumeInfo.swift */; };
 		4F6F4BAD24F7CBEB009E7687 /* ImageLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6F4BAC24F7CBEB009E7687 /* ImageLink.swift */; };
 		4F6F4BB224F8091E009E7687 /* BookDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6F4BB124F8091E009E7687 /* BookDatabase.swift */; };
+		4F6F4BBA24F8320A009E7687 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6F4BB924F8320A009E7687 /* DatabaseController.swift */; };
 		6A76C8922FF57EBA632D5EE4 /* Pods_books.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357436228F727A48483AF6A3 /* Pods_books.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		4F6F4BAA24F7CBDC009E7687 /* VolumeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeInfo.swift; sourceTree = "<group>"; };
 		4F6F4BAC24F7CBEB009E7687 /* ImageLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLink.swift; sourceTree = "<group>"; };
 		4F6F4BB124F8091E009E7687 /* BookDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDatabase.swift; sourceTree = "<group>"; };
+		4F6F4BB924F8320A009E7687 /* DatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
 		AA06B14FCB501CD27523B8FA /* Pods-books.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-books.debug.xcconfig"; path = "Target Support Files/Pods-books/Pods-books.debug.xcconfig"; sourceTree = "<group>"; };
 		BB05C7981E199C32B5B9DEDF /* Pods-books.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-books.release.xcconfig"; path = "Target Support Files/Pods-books/Pods-books.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +139,7 @@
 		4F6F4BAE24F807A0009E7687 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				4F6F4BB924F8320A009E7687 /* DatabaseController.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				4F6F4B9B24F6F9AE009E7687 /* FavoriteBooksController.swift in Sources */,
 				4F6F4BAD24F7CBEB009E7687 /* ImageLink.swift in Sources */,
 				4F6F4BA024F70392009E7687 /* FinishedBooksViewController.swift in Sources */,
+				4F6F4BBA24F8320A009E7687 /* DatabaseController.swift in Sources */,
 				4F6F4B9924F6F96C009E7687 /* SearchBooksController.swift in Sources */,
 				4F6F4B8724F5779F009E7687 /* SceneDelegate.swift in Sources */,
 				4F6F4B9E24F7036D009E7687 /* ToReadBooksController.swift in Sources */,
