@@ -27,11 +27,11 @@ class DatabaseController {
     }
     
     func getAll(completion: @escaping(Results<BookEntity>?) -> Void){
-        let tracks: Results<BookEntity>;
+        let books: Results<BookEntity>;
         do{
             let realm = try Realm()
-            tracks = realm.objects(BookEntity.self)
-            completion(tracks)
+            books = realm.objects(BookEntity.self)
+            completion(books)
         } catch {
             print("something went wrong: " + error.localizedDescription)
             completion(nil)

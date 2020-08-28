@@ -41,13 +41,4 @@ class Book: Decodable {
         
         )
     }
-    
-    
-//    @objc dynamic var id: String = ""
-//       @objc dynamic var title: String = ""
-//       @objc dynamic var authors: [String]? = nil
-//       @objc dynamic var descript: String = ""
-//       @objc dynamic var imageLink: String = ""
-//       @objc dynamic var subtitle: String = ""
-//       @objc dynamic var language: String = ""
 }
