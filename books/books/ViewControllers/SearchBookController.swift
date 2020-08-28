@@ -18,7 +18,7 @@ class SearchBookController: UITableViewController , UISearchResultsUpdating{
     override func viewDidLoad() {
         super.viewDidLoad()
         setSearchbarInNavbar()
-        self.tableView.rowHeight = 114
+        self.tableView.rowHeight = 120
     }
     
     func setSearchbarInNavbar(){
@@ -30,7 +30,6 @@ class SearchBookController: UITableViewController , UISearchResultsUpdating{
         self.definesPresentationContext = true
         
         navigationItem.searchController = searchController
-        
         navigationItem.hidesSearchBarWhenScrolling = false
     }
 
@@ -83,7 +82,7 @@ class SearchBookController: UITableViewController , UISearchResultsUpdating{
         let book = books[indexPath.row]
         
             DispatchQueue.main.async {
-                cell.update(book: book, image: #imageLiteral(resourceName: "NoPhotoAvailable"))
+                cell.update(book: book)
             }
         return cell
         }

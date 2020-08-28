@@ -12,7 +12,7 @@ class ImageLink: Decodable {
     var thumbnailURL: String?
     
     enum CodingKeys: String, CodingKey {
-        case thumbnailURL = "Thumbnail"
+        case thumbnailURL = "thumbnail"
     }
     
     init(thumbnailURL: String) {

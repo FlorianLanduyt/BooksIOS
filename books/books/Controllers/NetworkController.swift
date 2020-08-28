@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+
 extension URL {
     func withQueries(_ queries: [String: String]) -> URL? {
         var components = URLComponents(url: self, resolvingAgainstBaseURL: true)
@@ -21,13 +22,14 @@ extension URL {
 class NetworkController{
     // SOURCE: What is a singleton and how to create one in swift
     static let sharedInstance = NetworkController()
+
+    let booksUrl: String = "https://www.googleapis.com/books/v1/"
     
-    let BASE_URL: String = "https://www.googleapis.com/books/v1/"
-    
-    func getBooks(searchQuery: String, completion: @escaping (BookResponse?) -> Void){
-        let BASE_URL: String = "https://www.googleapis.com/books/v1/"
-        let searchURL = URL(string: BASE_URL)
-        let s = searchURL?.withQueries(["q":searchQuery])
+    func getBooks(searchQuery: String?, completion: @escaping (BookResponse?) -> Void){
+        
+        let booksUrl: String = "https://www.googleapis.com/books/v1/"
+        let searchURL = URL(string: booksUrl + "volumes?")
+        let s = searchURL?.withQueries(["q":searchQuery!])
 
         let task = URLSession.shared.dataTask(with: s!){
             (data, error, response) in
@@ -37,6 +39,12 @@ class NetworkController{
             } else {
                 completion(nil)
             }
+            
+//            if let data = data,
+//                let string = String(data: data, encoding: .utf8){
+//                    print(string)
+//                }
+            
         }
         task.resume()
     }

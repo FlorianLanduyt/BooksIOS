@@ -38,22 +38,22 @@ class BookEntity : Object {
         
     }
     
-    func toApiBook() -> Book {
-        
-        let volumeInfo: VolumInfo =
-            VolumInfo(
-                title:self.title,
-                authors: self.authors!,
-                description: self.descript,
-                imageLink: self.imageLink,
-                subtitle: self.subtitle,
-                language: self.language)
-        
-        
-        return Book(
-            id: self.id,
-            volumeInfo: volumeInfo
-        )
-    }
+//    func toApiBook() -> Book {
+//
+//        let volumeInfo: VolumInfo =
+//            VolumInfo(
+//                title:self.title,
+//                authors: self.authors!,
+//                description: self.descript,
+//                imageLink: self.imageLink,
+//                subtitle: self.subtitle,
+//                language: self.language)
+//
+//
+//        return Book(
+//            id: self.id,
+//            volumeInfo: volumeInfo
+//        )
+//    } 
 }
 

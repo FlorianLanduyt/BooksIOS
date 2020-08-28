@@ -24,9 +24,12 @@ class SearchBookCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func update(book : Book, image : UIImage){
+    func update(book : Book
+//        , image : UIImage
+    ){
         bookTitle.numberOfLines = 0
         bookTitle.lineBreakMode = NSLineBreakMode.byWordWrapping
-        bookCover.image = image
+        bookTitle.text = book.volumeInfo?.title
+        //bookCover.image = image
     }
 }
