@@ -221,8 +221,8 @@
             filePath = "books/Views/SearchBookCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "update(book:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -240,6 +240,70 @@
             startingLineNumber = "80"
             endingLineNumber = "80"
             landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "77DD08FF-054E-4694-A795-72A7B979F0C8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "books/ViewControllers/SearchBookController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "updateSearchResults(for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "77DD08FF-054E-4694-A795-72A7B979F0C8 - 4e1405a05f6344b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "books.SearchBookController.updateSearchResults(for: __C.UISearchController) -&gt; ()"
+                  moduleName = "books"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/florianlanduyt/Documents/TIN/2019-2020/Herexamens/iOS/Books/books/books/ViewControllers/SearchBookController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "441">
+               </Location>
+               <Location
+                  uuid = "77DD08FF-054E-4694-A795-72A7B979F0C8 - e91705ae56c73102"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;books.BookResponse&gt;) -&gt; () in books.SearchBookController.updateSearchResults(for: __C.UISearchController) -&gt; ()"
+                  moduleName = "books"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/florianlanduyt/Documents/TIN/2019-2020/Herexamens/iOS/Books/books/books/ViewControllers/SearchBookController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "171">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DF20F2CA-A20B-4F5B-BFD8-CA81F7EC1ED6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "books/Views/SearchBookCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "update(book:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

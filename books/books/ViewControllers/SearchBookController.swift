@@ -80,10 +80,7 @@ class SearchBookController: UITableViewController , UISearchResultsUpdating{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath) as! SearchBookCell
         let book = books[indexPath.row]
-        
-            DispatchQueue.main.async {
-                cell.update(book: book)
-            }
+        cell.update(book: book)
         return cell
         }
         
