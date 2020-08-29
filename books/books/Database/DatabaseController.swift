@@ -12,6 +12,7 @@ import RealmSwift
 
 class DatabaseController {
     static let sharedInstance = DatabaseController()
+
     
     func insertBook(book: BookEntity, completion: @escaping(Error?) -> Void){
         do {

@@ -29,17 +29,17 @@ class Book: Decodable {
         self.volumeInfo = volumeInfo
     }
     
-//    func toBookEntity() -> BookEntity {
-//        return BookEntity(
-//            id: self.id,
-//            title: self.volumeInfo!.title,
-//            authors: self.volumeInfo!.authors,
-//            descript: self.volumeInfo!.description,
-//            imageLink: self.volumeInfo!.imageLink!.thumbnailURL!,
-//            subtitle: self.volumeInfo!.subtitle,
-//           language: self.volumeInfo!.language
-//
-//        )
-//    }
+    func toBookEntity() -> BookEntity {
+        return BookEntity(
+            id: self.id,
+            title: self.volumeInfo!.title!,
+            authors: self.volumeInfo!.authors,
+            descript: self.volumeInfo!.description!,
+            imageLink: self.volumeInfo!.imageLink!.thumbnailURL!,
+            subtitle: self.volumeInfo!.subtitle!,
+           language: self.volumeInfo!.language!
+
+        )
+    }
 }
 

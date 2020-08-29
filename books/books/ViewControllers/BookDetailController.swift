@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 
 class BookDetailController: UIViewController {
@@ -14,6 +15,7 @@ class BookDetailController: UIViewController {
     @IBOutlet var bookCover: UIImageView!
     @IBOutlet var bookTitle: UILabel!
     @IBOutlet var bookDescription: UILabel!
+    
     
     var book : Book? = nil
     
@@ -40,5 +42,14 @@ class BookDetailController: UIViewController {
         }
     }
     
-
+    
+    @IBAction func addToFavorites(_ sender: UIButton) {
+        DatabaseController.sharedInstance.insertBook(book: self.book!.toBookEntity(), completion: { (error) in
+        if(error == nil){
+            self.view.makeToast("Boek toegevoegd aan favorieten", duration: 2.0, position: .bottom)
+        } else {
+            self.view.makeToast("Er is iets mis gelopen, probeer opnieuw", duration: 2.0, position: .bottom)
+        }
+    })
+    }
 }
