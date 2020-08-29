@@ -27,6 +27,19 @@ class DatabaseController {
         completion(nil)
     }
     
+    func inFavorites(id : String, completion: @escaping(Bool) -> Void){
+        do{
+            let realm = try! Realm()
+            
+            guard realm.object(ofType: BookEntity.self, forPrimaryKey: id) != nil else
+            {
+                completion(false)
+                return
+            }
+            completion(true)
+        }
+    }
+    
     func getAll(completion: @escaping(Results<BookEntity>?) -> Void){
         let books: Results<BookEntity>;
         do{
@@ -42,8 +55,12 @@ class DatabaseController {
     func removeBook(book: BookEntity, completion: @escaping(Error?) -> Void){
         do{
             let realm = try Realm()
-            try realm.write {
-                realm.delete(book)
+            
+            let bookToRemove: BookEntity? = realm.object(ofType: BookEntity.self, forPrimaryKey: book.id)
+            if let bookToRemove = bookToRemove {
+                try realm.write {
+                    realm.delete(bookToRemove)
+                }
             }
         } catch let error {
             print("something went wrong")

@@ -125,14 +125,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Titel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ux9-mz-LSI">
-                                            <rect key="frame" x="118" y="11" width="241" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ux9-mz-LSI">
+                                            <rect key="frame" x="118" y="26" width="268" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" misplaced="YES" text="Schrijvers" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVs-u7-LMG">
-                                            <rect key="frame" x="118" y="57" width="241" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Schrijvers" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVs-u7-LMG">
+                                            <rect key="frame" x="118" y="61.5" width="284" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -143,20 +143,16 @@
                                                 <constraint firstAttribute="width" constant="100" id="80V-xn-t3P"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wP2-xg-ejr">
-                                            <rect key="frame" x="374" y="79.5" width="31" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="NMe-dE-ANw" firstAttribute="centerY" secondItem="09o-qz-cEO" secondAttribute="centerY" id="2SH-Pc-lMS"/>
                                         <constraint firstItem="ux9-mz-LSI" firstAttribute="leading" secondItem="NMe-dE-ANw" secondAttribute="trailing" constant="8" symbolic="YES" id="36X-lH-Knf"/>
                                         <constraint firstItem="kVs-u7-LMG" firstAttribute="trailing" secondItem="09o-qz-cEO" secondAttribute="trailingMargin" constant="8" id="6Oc-Cu-Usx"/>
-                                        <constraint firstItem="kVs-u7-LMG" firstAttribute="top" secondItem="ux9-mz-LSI" secondAttribute="bottom" constant="25" id="Wrp-xT-4v4"/>
-                                        <constraint firstItem="ux9-mz-LSI" firstAttribute="top" secondItem="09o-qz-cEO" secondAttribute="topMargin" id="buq-Oa-yZ8"/>
+                                        <constraint firstItem="kVs-u7-LMG" firstAttribute="top" secondItem="ux9-mz-LSI" secondAttribute="bottom" constant="15" id="ChL-CH-0xE"/>
                                         <constraint firstItem="NMe-dE-ANw" firstAttribute="top" secondItem="09o-qz-cEO" secondAttribute="topMargin" constant="-3" id="dTw-G0-BuU"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ux9-mz-LSI" secondAttribute="trailing" constant="8" id="nqr-4d-zTl"/>
                                         <constraint firstItem="NMe-dE-ANw" firstAttribute="leading" secondItem="09o-qz-cEO" secondAttribute="leading" constant="10" id="pLe-CR-3Ds"/>
+                                        <constraint firstItem="ux9-mz-LSI" firstAttribute="top" secondItem="09o-qz-cEO" secondAttribute="topMargin" constant="15" id="ujE-AF-J0e"/>
                                         <constraint firstItem="kVs-u7-LMG" firstAttribute="leading" secondItem="NMe-dE-ANw" secondAttribute="trailing" constant="8" symbolic="YES" id="xcY-ml-24k"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -179,11 +175,11 @@
             </objects>
             <point key="canvasLocation" x="3476.811594202899" y="-1081.4732142857142"/>
         </scene>
-        <!--Item-->
+        <!--Favorieten-->
         <scene sceneID="P2F-d0-KIv">
             <objects>
                 <navigationController id="wPl-3H-lZ1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="heart.fill" catalog="system" id="Qpm-ox-gbp"/>
+                    <tabBarItem key="tabBarItem" title="Favorieten" image="heart.fill" catalog="system" id="Qpm-ox-gbp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wIR-41-sq8">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -248,13 +244,10 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVu-Os-sqL">
-                                                <rect key="frame" x="365" y="355" width="29" height="24"/>
-                                                <state key="normal" title="Button" backgroundImage="heart" catalog="system"/>
-                                                <connections>
-                                                    <action selector="addToFavorites:" destination="eBO-6f-5Q7" eventType="touchUpInside" id="qz3-yZ-ILK"/>
-                                                </connections>
-                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JAE-iu-hJV">
+                                                <rect key="frame" x="344" y="338.5" width="50" height="50"/>
+                                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -262,14 +255,14 @@
                                             <constraint firstAttribute="trailing" secondItem="Hpz-6l-4MU" secondAttribute="trailing" constant="70" id="RYx-hn-KCP"/>
                                             <constraint firstItem="6V9-bL-kZa" firstAttribute="leading" secondItem="ITS-bV-YkM" secondAttribute="leading" constant="20" id="TGc-ei-WPJ"/>
                                             <constraint firstAttribute="trailing" secondItem="6V9-bL-kZa" secondAttribute="trailing" constant="20" id="Ujc-DS-fwW"/>
-                                            <constraint firstItem="6V9-bL-kZa" firstAttribute="top" secondItem="AVu-Os-sqL" secondAttribute="bottom" constant="20" id="eJD-6W-nFL"/>
-                                            <constraint firstAttribute="trailing" secondItem="AVu-Os-sqL" secondAttribute="trailing" constant="20" id="ed8-b0-Hfs"/>
+                                            <constraint firstItem="JAE-iu-hJV" firstAttribute="centerY" secondItem="l9B-4y-TdS" secondAttribute="centerY" id="jPo-TC-1Sx"/>
                                             <constraint firstItem="l9B-4y-TdS" firstAttribute="centerY" secondItem="ITS-bV-YkM" secondAttribute="centerY" id="kff-Pf-qBD"/>
                                             <constraint firstItem="6V9-bL-kZa" firstAttribute="top" secondItem="l9B-4y-TdS" secondAttribute="bottom" constant="20" id="lKI-ad-AZ6"/>
                                             <constraint firstItem="Hpz-6l-4MU" firstAttribute="leading" secondItem="ITS-bV-YkM" secondAttribute="leading" constant="70" id="lZo-w4-Bb4"/>
                                             <constraint firstItem="l9B-4y-TdS" firstAttribute="top" secondItem="Hpz-6l-4MU" secondAttribute="bottom" constant="16" id="ly8-B6-ZP1"/>
                                             <constraint firstAttribute="trailing" secondItem="l9B-4y-TdS" secondAttribute="trailing" constant="20" id="oed-pt-1Vq"/>
                                             <constraint firstItem="l9B-4y-TdS" firstAttribute="leading" secondItem="ITS-bV-YkM" secondAttribute="leading" constant="20" id="tZa-A4-KvJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="JAE-iu-hJV" secondAttribute="trailing" constant="30" id="y9d-oe-gtW"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -289,11 +282,12 @@
                         <outlet property="bookCover" destination="Hpz-6l-4MU" id="z0m-Vi-3y5"/>
                         <outlet property="bookDescription" destination="FYb-27-eU4" id="pdB-uf-17u"/>
                         <outlet property="bookTitle" destination="l9B-4y-TdS" id="ZCO-TB-kic"/>
+                        <outlet property="removeFavorite" destination="JAE-iu-hJV" id="WcV-Jm-Baa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nti-ek-Wnp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5100" y="-1428"/>
+            <point key="canvasLocation" x="5098.5507246376819" y="-1428.3482142857142"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
