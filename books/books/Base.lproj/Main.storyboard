@@ -278,7 +278,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ef7-vo-mMk"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Details" id="TOC-hs-moT"/>
+                    <navigationItem key="navigationItem" title="Details" id="TOC-hs-moT">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="zbS-Zy-qDW">
+                            <connections>
+                                <action selector="shareBook:" destination="eBO-6f-5Q7" id="L8E-Eg-msp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="bookCover" destination="Hpz-6l-4MU" id="z0m-Vi-3y5"/>
                         <outlet property="bookDescription" destination="FYb-27-eU4" id="pdB-uf-17u"/>
@@ -298,5 +304,6 @@
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
     </resources>
 </document>

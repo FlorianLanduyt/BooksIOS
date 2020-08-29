@@ -97,6 +97,16 @@ class BookDetailController: UIViewController {
         })
     }
     
+    @IBAction func shareBook(_ sender: Any) {
+        let text = " \(String(describing: self.book?.volumeInfo?.title)) is zeker de moeite om een te lezen!"
+        
+        let shareItems = [text] as [Any]
+        let activityViewController = UIActivityViewController(activityItems: shareItems,applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        self.present(activityViewController,animated: true,completion: nil)
+    }
+    
+    
     
     private func setHeartEmpty() {
         self.removeFavorite.image = UIImage(systemName: "heart")
