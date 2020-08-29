@@ -11,7 +11,7 @@ import Toast_Swift
 
 
 class BookDetailController: UIViewController {
-
+    
     @IBOutlet var bookCover: UIImageView!
     @IBOutlet var bookTitle: UILabel!
     @IBOutlet var bookDescription: UILabel!
@@ -30,36 +30,13 @@ class BookDetailController: UIViewController {
         removeFavorite.addGestureRecognizer(tapGestureRecognizer)
     }
     
-        @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
-        {
-            DatabaseController.sharedInstance.inFavorites(id: book!.id, completion: { (bool) in
-                if(bool){
-                    self.removeBook()
-                } else {
-                    self.addBook()
-                }
-            })
-    }
-    
-    private func removeBook(){
-        DatabaseController.sharedInstance.removeBook(book: self.book!.toBookEntity(), completion: {(error) in
-            if(error == nil){
-                self.view.makeToast("Boek verwijderd uit favorieten", duration: 2.0, position: .bottom)
-                self.removeFavorite.image = UIImage(systemName: "heart")
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        DatabaseController.sharedInstance.inFavorites(id: book!.id, completion: { (bool) in
+            if(bool){
+                self.removeBook()
             } else {
-                self.view.makeToast("Er is iets mis gelopen, probeer opnieuw", duration: 2.0, position: .bottom)
-                
-            }
-        })
-    }
-    
-    private func addBook(){
-        DatabaseController.sharedInstance.insertBook(book: self.book!.toBookEntity(), completion: { (error) in
-            if(error == nil){
-                self.view.makeToast("Boek toegevoegd aan favorieten", duration: 2.0, position: .bottom)
-                self.removeFavorite.image = UIImage(systemName: "heart.fill")
-            } else {
-                self.view.makeToast("Er is iets mis gelopen, probeer opnieuw", duration: 2.0, position: .bottom)
+                self.addBook()
             }
         })
     }
@@ -68,13 +45,11 @@ class BookDetailController: UIViewController {
         if let book = book {
             DatabaseController.sharedInstance.inFavorites(id: book.id, completion: { (bool) in
                 if(bool){
-                    self.removeFavorite.image = UIImage(systemName: "heart.fill")
+                    self.setHeartFilled()
                 } else {
-                    self.removeFavorite.image = UIImage(systemName: "heart")
+                    self.setHeartEmpty()
                 }
             })
-            
-            
             self.bookCover.kf.indicatorType = .activity
             self.bookCover.kf.setImage(with: URL(string: book.volumeInfo!.imageLink!.thumbnailURL!))
             
@@ -82,21 +57,57 @@ class BookDetailController: UIViewController {
             self.bookTitle.lineBreakMode = NSLineBreakMode.byWordWrapping
             self.bookTitle.text = book.volumeInfo?.title
             
-
+            
             bookDescription.numberOfLines = 0
             bookDescription.lineBreakMode = NSLineBreakMode.byWordWrapping
-            self.bookDescription.text = book.volumeInfo?.description
+            
+            let bookDescription = book.volumeInfo?.description
+            if let bookDescription = bookDescription {
+                 self.bookDescription.text = bookDescription
+            } else {
+                self.book?.volumeInfo?.description = "Geen beschrijving gevonden van dit boek."
+                self.bookDescription.text = "Geen beschrijving gevonden van dit boek."
+            }
+            
+           
         }
     }
     
+    private func removeBook(){
+        DatabaseController.sharedInstance.removeBook(book: self.book!.toBookEntity(), completion: {(error) in
+            if(error == nil){
+                self.setHeartEmpty()
+                self.view.makeToast("Boek verwijderd uit favorieten", duration: 2.0, position: .bottom)
+                
+            } else {
+                self.somethingWrongToast()
+            }
+        })
+    }
     
-    @IBAction func addToFavorites(_ sender: UIButton) {
+    private func addBook(){
         DatabaseController.sharedInstance.insertBook(book: self.book!.toBookEntity(), completion: { (error) in
-        if(error == nil){
-            self.view.makeToast("Boek toegevoegd aan favorieten", duration: 2.0, position: .bottom)
-        } else {
-            self.view.makeToast("Er is iets mis gelopen, probeer opnieuw", duration: 2.0, position: .bottom)
-        }
-    })
+            if(error == nil){
+                self.setHeartFilled()
+                self.view.makeToast("Boek toegevoegd aan favorieten", duration: 2.0, position: .bottom)
+                
+            } else {
+                self.somethingWrongToast()
+            }
+        })
     }
+    
+    
+    private func setHeartEmpty() {
+        self.removeFavorite.image = UIImage(systemName: "heart")
+    }
+    
+    private func setHeartFilled() {
+        self.removeFavorite.image = UIImage(systemName: "heart.fill")
+    }
+    
+    private func somethingWrongToast(){
+        self.view.makeToast("Er is iets mis gelopen, probeer opnieuw", duration: 2.0, position: .bottom)
+    }
+    
 }

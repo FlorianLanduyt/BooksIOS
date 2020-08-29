@@ -251,6 +251,7 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="JAE-iu-hJV" secondAttribute="trailing" constant="20" id="04a-28-jUX"/>
                                             <constraint firstItem="Hpz-6l-4MU" firstAttribute="top" secondItem="ITS-bV-YkM" secondAttribute="top" constant="8" id="08v-g9-CGV"/>
                                             <constraint firstAttribute="trailing" secondItem="Hpz-6l-4MU" secondAttribute="trailing" constant="70" id="RYx-hn-KCP"/>
                                             <constraint firstItem="6V9-bL-kZa" firstAttribute="leading" secondItem="ITS-bV-YkM" secondAttribute="leading" constant="20" id="TGc-ei-WPJ"/>
