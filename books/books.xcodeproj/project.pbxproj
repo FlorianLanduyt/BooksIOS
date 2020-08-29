@@ -22,6 +22,7 @@
 		4FDAEF2C24F92FC000DFD5D2 /* SearchBookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDAEF2B24F92FC000DFD5D2 /* SearchBookController.swift */; };
 		4FDAEF2E24F92FF900DFD5D2 /* SearchBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDAEF2D24F92FF900DFD5D2 /* SearchBookCell.swift */; };
 		4FDAEF3224F945A200DFD5D2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDAEF3124F945A200DFD5D2 /* Extension.swift */; };
+		4FDAEF3424F9AC2A00DFD5D2 /* BookDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDAEF3324F9AC2A00DFD5D2 /* BookDetailController.swift */; };
 		6A76C8922FF57EBA632D5EE4 /* Pods_books.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357436228F727A48483AF6A3 /* Pods_books.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		4FDAEF2B24F92FC000DFD5D2 /* SearchBookController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookController.swift; sourceTree = "<group>"; };
 		4FDAEF2D24F92FF900DFD5D2 /* SearchBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookCell.swift; sourceTree = "<group>"; };
 		4FDAEF3124F945A200DFD5D2 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		4FDAEF3324F9AC2A00DFD5D2 /* BookDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailController.swift; sourceTree = "<group>"; };
 		AA06B14FCB501CD27523B8FA /* Pods-books.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-books.debug.xcconfig"; path = "Target Support Files/Pods-books/Pods-books.debug.xcconfig"; sourceTree = "<group>"; };
 		BB05C7981E199C32B5B9DEDF /* Pods-books.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-books.release.xcconfig"; path = "Target Support Files/Pods-books/Pods-books.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +111,7 @@
 			children = (
 				4FDAEF2B24F92FC000DFD5D2 /* SearchBookController.swift */,
 				4FDAEF3124F945A200DFD5D2 /* Extension.swift */,
+				4FDAEF3324F9AC2A00DFD5D2 /* BookDetailController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				4FDAEF2C24F92FC000DFD5D2 /* SearchBookController.swift in Sources */,
 				4F6F4BAD24F7CBEB009E7687 /* ImageLink.swift in Sources */,
 				4F6F4BBA24F8320A009E7687 /* DatabaseController.swift in Sources */,
+				4FDAEF3424F9AC2A00DFD5D2 /* BookDetailController.swift in Sources */,
 				4F6F4B8724F5779F009E7687 /* SceneDelegate.swift in Sources */,
 				4F6F4BA324F705D5009E7687 /* BookResponse.swift in Sources */,
 				4F6F4BAB24F7CBDC009E7687 /* VolumeInfo.swift in Sources */,

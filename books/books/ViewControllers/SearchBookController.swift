@@ -82,9 +82,20 @@ class SearchBookController: UITableViewController , UISearchResultsUpdating{
         let book = books[indexPath.row]
         cell.update(book: book)
         return cell
-        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        performSegue(withIdentifier: "showBookDetails", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
         
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? BookDetailController,
+            let row = tableView.indexPathForSelectedRow?.row {
+            destination.book = books[row]
+        }
+    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
