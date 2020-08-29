@@ -18,6 +18,9 @@ class BookDetailController: UIViewController {
     
     @IBOutlet var removeFavorite: UIImageView!
     
+    
+    
+    
     var book : Book? = nil
     
     
