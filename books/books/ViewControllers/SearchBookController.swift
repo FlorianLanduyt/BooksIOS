@@ -71,7 +71,7 @@ class SearchBookController: UITableViewController , UISearchResultsUpdating{
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if(self.books.count == 0){
-            self.tableView.setEmptyView(message: "No result for search")
+            self.tableView.setEmptyView(message: "Geef titel van boek in")
         } else {
             tableView.restore()
         }
