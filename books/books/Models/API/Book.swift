@@ -11,6 +11,8 @@ import Foundation
 class Book: Decodable {
     var id: String = ""
     var volumeInfo: VolumInfo? = nil
+    var inFavorites: Bool = false
+    var rating: Int = 0
     
     enum CodingKeys : String, CodingKey{
         case id = "id"
@@ -24,7 +26,7 @@ class Book: Decodable {
         self.volumeInfo = try valueContainer.decode(VolumInfo.self, forKey: CodingKeys.volumeInfo)
     }
     
-     init(id: String, volumeInfo: VolumInfo) {
+    init(id: String, volumeInfo: VolumInfo, inFavorites: Bool, rating: Int) {
         self.id = id
         self.volumeInfo = volumeInfo
     }
@@ -37,7 +39,9 @@ class Book: Decodable {
             descript: self.volumeInfo!.description!,
             imageLink: self.volumeInfo!.imageLink!.thumbnailURL!,
             subtitle: self.volumeInfo!.subtitle!,
-           language: self.volumeInfo!.language!
+           language: self.volumeInfo!.language!,
+           inFavorites: self.inFavorites,
+           rating: self.rating
 
         )
     }

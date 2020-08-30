@@ -19,6 +19,9 @@ class BookEntity : Object {
     @objc dynamic var subtitle: String = ""
     @objc dynamic var language: String = ""
     
+    @objc dynamic var inFavorites: Bool = false
+    @objc dynamic var rating: Int = 0
+    
     override static func primaryKey() -> String? {
         return "id"
     }
@@ -27,14 +30,15 @@ class BookEntity : Object {
         super.init()
     }
     
-    init(id:String, title: String, authors: [String]?, descript: String, imageLink: String, subtitle: String,language: String ) {
+    init(id:String, title: String, authors: [String]?, descript: String, imageLink: String, subtitle: String,language: String, inFavorites: Bool, rating: Int ) {
         self.id = id
         self.title = title
         self.descript = descript
         self.imageLink = imageLink
         self.subtitle = subtitle
         self.language = language
-        
+        self.inFavorites = inFavorites
+        self.rating = rating
         
         var res = ""
         
@@ -47,8 +51,6 @@ class BookEntity : Object {
         }
         res.removeLast(2)
         self.authors = res
-
-        
     }
     
     func toApiBook() -> Book {
@@ -74,7 +76,9 @@ class BookEntity : Object {
 
         return Book(
             id: self.id,
-            volumeInfo: volumeInfo
+            volumeInfo: volumeInfo,
+            inFavorites: self.inFavorites,
+            rating: self.rating
         )
     }
 }

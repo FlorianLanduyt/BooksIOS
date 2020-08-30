@@ -12,7 +12,13 @@ import RealmSwift
 
 class DatabaseController {
     static let sharedInstance = DatabaseController()
-
+    
+    init(){
+        let config = Realm.Configuration(
+            schemaVersion: 1
+        )
+        Realm.Configuration.defaultConfiguration = config
+    }
     
     func insertBook(book: BookEntity, completion: @escaping(Error?) -> Void){
         do {
@@ -66,7 +72,7 @@ class DatabaseController {
             print("something went wrong")
             completion(error)
         }
-
+        
         completion(nil)
     }
     func removeAllBooks(completion: @escaping(Error?) -> Void){
@@ -82,5 +88,39 @@ class DatabaseController {
         
         completion(nil)
     }
-}
+    
+    func addRating(book: BookEntity, completion: @escaping(Error?) -> Void){
+        do {
+            let realm = try! Realm()
+            try realm.write{
+                //check if the movieSerieDetail is in the database will be done in the viewController
+                let bookFromDb = realm.object(ofType: BookEntity.self, forPrimaryKey: book.id)
+                if let bookFromDb = bookFromDb {
+                    bookFromDb.rating = book.rating
+                    realm.add(bookFromDb, update: .modified)
+                } else {
+                    realm.add(book, update: .modified)
+                }
+            }
+            completion(nil)
+        } catch let error as NSError{
+            completion(error)
+        }
+    }
+    
+    func getRating(bookId: String, completion: @escaping(Int?) -> Void){
+        do {
+            let realm = try! Realm()
+            
+            //check if the movieSerieDetail is in the database will be done in the viewController
+            let bookFromDb = realm.object(ofType: BookEntity.self, forPrimaryKey: bookId)
+            guard let bookFromDbNotNull = bookFromDb else {
+                completion(nil)
+                return
+            }
+            
+            completion(bookFromDbNotNull.rating)
+        }
+    }
 
+}

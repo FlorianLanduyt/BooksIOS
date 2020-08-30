@@ -218,36 +218,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zle-iC-zNh">
-                                                <rect key="frame" x="20" y="363" width="376" height="72"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbe-s0-VaX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="72"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                        <state key="normal" title="☆"/>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egE-sM-HoX">
-                                                        <rect key="frame" x="76" y="0.0" width="71.5" height="72"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                        <state key="normal" title="☆"/>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="os6-TY-yhb">
-                                                        <rect key="frame" x="152.5" y="0.0" width="71" height="72"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                        <state key="normal" title="☆"/>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcM-wE-Fm5">
-                                                        <rect key="frame" x="228.5" y="0.0" width="71.5" height="72"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                        <state key="normal" title="☆"/>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lde-MI-pjR">
-                                                        <rect key="frame" x="305" y="0.0" width="71" height="72"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                        <state key="normal" title="☆"/>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JAE-iu-hJV">
                                                 <rect key="frame" x="344" y="278.5" width="50" height="50"/>
                                                 <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -256,8 +226,8 @@
                                                     <constraint firstAttribute="height" constant="52.5" id="naA-kN-1Tc"/>
                                                 </constraints>
                                             </imageView>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ma7-ZG-oVs">
-                                                <rect key="frame" x="20" y="443" width="376" height="274"/>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ma7-ZG-oVs">
+                                                <rect key="frame" x="20" y="417" width="376" height="300"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beschrijving" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6H-yS-BMg">
                                                         <rect key="frame" x="8" y="8" width="360" height="21"/>
@@ -288,6 +258,51 @@
                                                 <viewLayoutGuide key="contentLayoutGuide" id="qZY-Nw-gIz"/>
                                                 <viewLayoutGuide key="frameLayoutGuide" id="Efm-BB-drn"/>
                                             </scrollView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zle-iC-zNh">
+                                                <rect key="frame" x="20" y="337" width="376" height="60"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbe-s0-VaX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="60"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <state key="normal" title="☆"/>
+                                                        <connections>
+                                                            <action selector="starButtonTapped:" destination="eBO-6f-5Q7" eventType="touchUpInside" id="X2b-aP-fL0"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egE-sM-HoX">
+                                                        <rect key="frame" x="76" y="0.0" width="71.5" height="60"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <state key="normal" title="☆"/>
+                                                        <connections>
+                                                            <action selector="starButtonTapped:" destination="eBO-6f-5Q7" eventType="touchUpInside" id="hF9-2X-Gy0"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="os6-TY-yhb">
+                                                        <rect key="frame" x="152.5" y="0.0" width="71" height="60"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <state key="normal" title="☆"/>
+                                                        <connections>
+                                                            <action selector="starButtonTapped:" destination="eBO-6f-5Q7" eventType="touchUpInside" id="Xnd-4i-GHj"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcM-wE-Fm5">
+                                                        <rect key="frame" x="228.5" y="0.0" width="71.5" height="60"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <state key="normal" title="☆"/>
+                                                        <connections>
+                                                            <action selector="starButtonTapped:" destination="eBO-6f-5Q7" eventType="touchUpInside" id="qJJ-Nt-gyC"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lde-MI-pjR">
+                                                        <rect key="frame" x="305" y="0.0" width="71" height="60"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <state key="normal" title="☆"/>
+                                                        <connections>
+                                                            <action selector="starButtonTapped:" destination="eBO-6f-5Q7" eventType="touchUpInside" id="rTm-Ho-5RX"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -298,7 +313,7 @@
                                             <constraint firstItem="JAE-iu-hJV" firstAttribute="top" secondItem="Hpz-6l-4MU" secondAttribute="bottom" constant="9" id="CUd-Wv-v8v"/>
                                             <constraint firstAttribute="trailing" secondItem="Hpz-6l-4MU" secondAttribute="trailing" constant="70" id="RYx-hn-KCP"/>
                                             <constraint firstItem="Ma7-ZG-oVs" firstAttribute="top" secondItem="zle-iC-zNh" secondAttribute="bottom" constant="8" symbolic="YES" id="dUd-CH-40V"/>
-                                            <constraint firstItem="zle-iC-zNh" firstAttribute="top" secondItem="JAE-iu-hJV" secondAttribute="bottom" constant="32.5" id="hJm-if-Cxi"/>
+                                            <constraint firstItem="zle-iC-zNh" firstAttribute="top" secondItem="JAE-iu-hJV" secondAttribute="bottom" constant="10" id="hJm-if-Cxi"/>
                                             <constraint firstItem="Ma7-ZG-oVs" firstAttribute="leading" secondItem="zle-iC-zNh" secondAttribute="leading" id="kZF-xY-nvm"/>
                                             <constraint firstItem="Hpz-6l-4MU" firstAttribute="leading" secondItem="ITS-bV-YkM" secondAttribute="leading" constant="70" id="lZo-w4-Bb4"/>
                                             <constraint firstItem="l9B-4y-TdS" firstAttribute="top" secondItem="Hpz-6l-4MU" secondAttribute="bottom" constant="15" id="ly8-B6-ZP1"/>
@@ -332,6 +347,11 @@
                         <outlet property="bookDescription" destination="FYb-27-eU4" id="pdB-uf-17u"/>
                         <outlet property="bookTitle" destination="l9B-4y-TdS" id="ZCO-TB-kic"/>
                         <outlet property="removeFavorite" destination="JAE-iu-hJV" id="WcV-Jm-Baa"/>
+                        <outletCollection property="starButtons" destination="Nbe-s0-VaX" collectionClass="NSMutableArray" id="SHv-mW-wPO"/>
+                        <outletCollection property="starButtons" destination="os6-TY-yhb" collectionClass="NSMutableArray" id="q96-IV-iAj"/>
+                        <outletCollection property="starButtons" destination="egE-sM-HoX" collectionClass="NSMutableArray" id="ghs-8g-Nlr"/>
+                        <outletCollection property="starButtons" destination="vcM-wE-Fm5" collectionClass="NSMutableArray" id="fYq-lB-V5t"/>
+                        <outletCollection property="starButtons" destination="Lde-MI-pjR" collectionClass="NSMutableArray" id="Khn-EI-vu2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nti-ek-Wnp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

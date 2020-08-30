@@ -17,6 +17,20 @@ class BookDetailController: UIViewController {
     @IBOutlet var bookDescription: UILabel!
     
     @IBOutlet var removeFavorite: UIImageView!
+        
+    @IBOutlet var starButtons: [UIButton]!
+    
+    @IBAction func starButtonTapped(_ sender: UIButton) {
+        let tag = sender.tag
+        
+        self.setRating(rating: tag)
+        
+        let tagToSet = sender.tag
+        book?.rating = tagToSet
+        
+        self.addRatingToBook()
+        
+    }
     
     
     
@@ -31,6 +45,16 @@ class BookDetailController: UIViewController {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         removeFavorite.isUserInteractionEnabled = true
         removeFavorite.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    private func addRatingToBook(){
+        DatabaseController.sharedInstance.addRating(book: self.book!.toBookEntity(), completion: { (error) in
+            if(error == nil){
+                self.view.makeToast("Rating toegevoegd aan boek", duration: 2.0, position: .bottom)
+            } else {
+                self.somethingWrongToast()
+            }
+        })
     }
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
@@ -60,6 +84,7 @@ class BookDetailController: UIViewController {
             self.bookTitle.lineBreakMode = NSLineBreakMode.byWordWrapping
             self.bookTitle.text = book.volumeInfo?.title
             
+            self.getRatingForBook()
             
             bookDescription.numberOfLines = 0
             bookDescription.lineBreakMode = NSLineBreakMode.byWordWrapping
@@ -76,6 +101,26 @@ class BookDetailController: UIViewController {
         }
     }
     
+    private func setRating(rating: Int){
+        for button in starButtons {
+            if button.tag <= rating{
+                button.setTitle("★", for: .normal)
+            } else {
+                 button.setTitle("☆", for: .normal)
+            }
+        }
+    }
+    
+    private func getRatingForBook(){
+        DatabaseController.sharedInstance.getRating(bookId: book!.id, completion:{ (rating) in
+            if (rating == nil){
+                return
+            } else {
+                self.setRating(rating: rating!)
+            }
+        })
+    }
+    
     private func removeBook(){
         DatabaseController.sharedInstance.removeBook(book: self.book!.toBookEntity(), completion: {(error) in
             if(error == nil){
@@ -87,6 +132,7 @@ class BookDetailController: UIViewController {
             }
         })
     }
+    
     
     private func addBook(){
         DatabaseController.sharedInstance.insertBook(book: self.book!.toBookEntity(), completion: { (error) in
