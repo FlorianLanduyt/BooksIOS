@@ -56,6 +56,7 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         collectionViewRated.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionViewRated.backgroundColor = .systemBackground
+        
     }
     
     
@@ -87,7 +88,7 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if collectionView == self.collectionViewFavorites {
             if let favoriteBooks = favoriteBooks {
                 if(favoriteBooks.count == 0){
-                    self.view.makeToast("Voeg een boek toe!", position: .center)
+                     self.view.makeToast("Voeg een boek toe aan favorieten!", position: .center)
                 }
                 return favoriteBooks.count
             } else {
@@ -98,7 +99,7 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         if let ratedBooks = ratedBooks {
             if(ratedBooks.count == 0){
-                self.view.makeToast("Voeg een boek toe!", position: .center)
+                self.view.makeToast("Voeg rating toe aan een boek!", position: .bottom)
             }
             return ratedBooks.count
         } else {

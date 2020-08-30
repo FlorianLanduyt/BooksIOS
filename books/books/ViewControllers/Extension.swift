@@ -40,3 +40,33 @@ extension UITableView{
         self.separatorStyle = .singleLine
     }
 }
+
+extension UICollectionView{
+    func setEmptyView(message : String){
+        
+        let emptyView = UIView(frame: CGRect(x: self.center.x, y: self.center.y, width: self.bounds.size.width, height: self.bounds.size.height))
+        
+        let messageLabel = UILabel()
+        
+        messageLabel.translatesAutoresizingMaskIntoConstraints = false
+        messageLabel.font = UIFont(name: "HelveticaNeue-Regular", size: 17)
+        
+        
+        emptyView.addSubview(messageLabel)
+        
+        messageLabel.centerYAnchor.constraint(equalTo: emptyView.centerYAnchor).isActive = true
+        messageLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor).isActive = true
+        
+        messageLabel.text = message
+        messageLabel.numberOfLines = 0
+        messageLabel.textAlignment = .center
+        
+        self.backgroundView = emptyView
+        
+    }
+    
+    func restore() {
+        self.backgroundView = nil
+        
+    }
+}
