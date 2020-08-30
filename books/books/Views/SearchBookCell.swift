@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import RealmSwift
 
 
 class SearchBookCell: UITableViewCell {
@@ -15,6 +16,8 @@ class SearchBookCell: UITableViewCell {
     @IBOutlet var bookTitle: UILabel!
     @IBOutlet var bookCover: UIImageView!
     @IBOutlet var authors: UILabel!
+
+    @IBOutlet var starButtons: [UIButton]!
     
 
     override func awakeFromNib() {
@@ -51,5 +54,32 @@ class SearchBookCell: UITableViewCell {
         res.removeLast(2)
         
         self.authors.text = res
+        
+        getRatingUI(book: book)
     }
+    
+    private func getRatingUI(book: Book){
+        DatabaseController.sharedInstance.getRating(bookId: book.id, completion:{ (rating) in
+            if (rating == nil){
+                return
+            } else {
+                self.setRatingUI(rating: rating!)
+            }
+        })
+    }
+    
+    private func setRatingUI(rating: Int){
+        if let starButtons = self.starButtons {
+            for button in starButtons {
+                if button.tag <= rating{
+                    button.setTitle("★", for: .normal)
+                } else {
+                     button.setTitle("☆", for: .normal)
+                }
+            }
+        }
+        
+    }
+    
+    
 }

@@ -221,9 +221,9 @@
             filePath = "books/Views/SearchBookCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "setSelected(_:animated:)"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "update(book:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -301,8 +301,8 @@
             filePath = "books/Views/SearchBookCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "update(book:)"
             landmarkType = "7">
          </BreakpointContent>
