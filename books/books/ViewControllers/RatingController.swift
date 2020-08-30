@@ -81,7 +81,7 @@ class RatingController: UITableViewController {
         
         DatabaseController.sharedInstance.addRating(book: book.toBookEntity(), completion: { (error) in
             if(error == nil){
-                self.view.makeToast("rating verwijderd van het boek", duration: 2.0, position: .center)
+                self.view.makeToast("Rating verwijderd van het boek", duration: 2.0, position: .center)
             } else {
                 self.view.makeToast("Er is iets mis gelopen, probeer opnieuw", duration: 2.0, position: .center)
             }

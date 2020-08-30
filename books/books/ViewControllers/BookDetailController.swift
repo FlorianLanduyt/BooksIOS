@@ -32,6 +32,12 @@ class BookDetailController: UIViewController {
         
     }
     
+    @IBOutlet var scrollView: UIScrollView!
+    
+    override func viewWillLayoutSubviews(){
+    super.viewWillLayoutSubviews()
+        scrollView.contentSize = CGSize(width: 200, height: 600)
+    }
     
     var book : Book? = nil
     
@@ -149,7 +155,7 @@ class BookDetailController: UIViewController {
     }
     
     @IBAction func shareBook(_ sender: Any) {
-        let text = " \(String(describing: self.book?.volumeInfo?.title)) is zeker de moeite om een te lezen!"
+        let text = " \(String(describing: self.book!.volumeInfo!.title!)) is zeker de moeite om een te lezen!"
         
         let shareItems = [text] as [Any]
         let activityViewController = UIActivityViewController(activityItems: shareItems,applicationActivities: nil)
