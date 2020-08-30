@@ -11,6 +11,9 @@ import Kingfisher
 import RealmSwift
 
 
+// Got the idea to use KingFisher of
+// https://medium.com/@iqbalhood/kingfisher-best-image-downloading-and-processing-libraries-for-swift-aa28083e703b
+
 class SearchBookCell: UITableViewCell {
     
     @IBOutlet var bookTitle: UILabel!

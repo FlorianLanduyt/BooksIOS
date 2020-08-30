@@ -40,8 +40,6 @@ class HomeBookCell: UICollectionViewCell {
         self.bookCover.layer.cornerRadius = 15
         self.bookCover.clipsToBounds = true
         
-//        let innerStackView = UIStackView(arrangedSubviews: [self.bookTitle])
-//        innerStackView.axis = .vertical
 
         let outerStackView = UIStackView(arrangedSubviews: [self.bookCover, self.bookTitle])
         outerStackView.translatesAutoresizingMaskIntoConstraints = false

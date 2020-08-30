@@ -9,6 +9,10 @@
 import UIKit
 import RealmSwift
 
+
+// Got the idea to use a collection instead of tableview from
+// https://ashfurrow.com/blog/putting-a-uicollectionview-in-a-uitableviewcell-in-swift/
+
 extension UICollectionView {
     
     var centerPoint : CGPoint {
@@ -141,19 +145,19 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
 //    private func collectionView(_ collectionView: UICollectionView, didSelectRowAt indexPath: IndexPath){
 //        print(indexPath)
 //    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let visiblePoint = CGRect(origin: collectionViewFavorites.contentOffset, size: collectionViewFavorites.bounds.size).origin
-//        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
-//        let visibleIndexPath = collectionViewFavorites.indexPathForItem(at: visiblePoint)
-
-
-        if let destination = segue.destination as? BookDetailController,
-            let index = collectionViewFavorites.indexPathForItem(at: visiblePoint) {
-            destination.book = favoriteBooks![index.row].toApiBook()
-        }
-
-    }
+//    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let visiblePoint = CGRect(origin: collectionViewFavorites.contentOffset, size: collectionViewFavorites.bounds.size).origin
+////        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
+////        let visibleIndexPath = collectionViewFavorites.indexPathForItem(at: visiblePoint)
+//
+//
+//        if let destination = segue.destination as? BookDetailController,
+//            let index = collectionViewFavorites.indexPathForItem(at: visiblePoint) {
+//            destination.book = favoriteBooks![index.row].toApiBook()
+//        }
+//
+//    }
         
     }
     
