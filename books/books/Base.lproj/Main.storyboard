@@ -484,7 +484,7 @@
         <!--Details-->
         <scene sceneID="PNx-6u-rW3">
             <objects>
-                <viewController id="eBO-6f-5Q7" customClass="BookDetailController" customModule="books" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="details" id="eBO-6f-5Q7" customClass="BookDetailController" customModule="books" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AT9-RV-X38">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -652,7 +652,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6nb-np-iQw"/>
+        <segue reference="JI7-ae-xOX"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart" catalog="system" width="128" height="109"/>

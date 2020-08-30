@@ -92,7 +92,7 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if collectionView == self.collectionViewFavorites {
             if let favoriteBooks = favoriteBooks {
                 if(favoriteBooks.count == 0){
-                     self.view.makeToast("Voeg een boek toe aan favorieten!", position: .center)
+                    self.view.makeToast("Voeg een boek toe aan favorieten!", position: .center)
                 }
                 return favoriteBooks.count
             } else {
@@ -141,26 +141,23 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
     }
-
-//    private func collectionView(_ collectionView: UICollectionView, didSelectRowAt indexPath: IndexPath){
-//        print(indexPath)
-//    }
-//    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let visiblePoint = CGRect(origin: collectionViewFavorites.contentOffset, size: collectionViewFavorites.bounds.size).origin
-////        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
-////        let visibleIndexPath = collectionViewFavorites.indexPathForItem(at: visiblePoint)
-//
-//
-//        if let destination = segue.destination as? BookDetailController,
-//            let index = collectionViewFavorites.indexPathForItem(at: visiblePoint) {
-//            destination.book = favoriteBooks![index.row].toApiBook()
-//        }
-//
-//    }
-        
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //performSegue(withIdentifier: "favoritesToDetail", sender: self)
+        if collectionView == self.collectionViewFavorites {
+            let detailController = storyboard?.instantiateViewController(identifier: "details") as? BookDetailController
+            detailController?.book = favoriteBooks![indexPath.row].toApiBook()
+            self.navigationController?.pushViewController(detailController!, animated: true)
+        } else {
+            let detailController = storyboard?.instantiateViewController(identifier: "details") as? BookDetailController
+            detailController?.book = ratedBooks![indexPath.row].toApiBook()
+            self.navigationController?.pushViewController(detailController!, animated: true)
+        }
     }
     
     
-    
+}
+
+
+
 
