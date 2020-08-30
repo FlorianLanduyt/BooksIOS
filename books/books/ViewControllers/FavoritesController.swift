@@ -16,30 +16,12 @@ class FavoritesController: UITableViewController {
     
     var books : Results<BookEntity>?
     
-//    @IBOutlet var removeFavorite: UIImageView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-        //        removeFavorite.isUserInteractionEnabled = true
-        //        removeFavorite.addGestureRecognizer(tapGestureRecognizer)
     }
-    
-    //    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
-    //    {
-    ////        let tappedImage = tapGestureRecognizer.view as! UIImageView
-    //        let row = tableView.indexPathForSelectedRow?.row
-    //
-    //        DatabaseController.sharedInstance.removeBook(book: books![row!], completion: { (error) in
-    //        if(error == nil){
-    //            self.view.makeToast("Boek toegevoegd aan favorieten", duration: 2.0, position: .bottom)
-    //        } else {
-    //            self.view.makeToast("Er is iets mis gelopen, probeer opnieuw", duration: 2.0, position: .bottom)
-    //        }
-    //
-    //    }
+   
     
     override func viewWillAppear(_ animated: Bool) {
         DatabaseController.sharedInstance.getAll(completion: {
@@ -107,7 +89,7 @@ class FavoritesController: UITableViewController {
         }
     }
     
-    
+    //ratedToDetail
     
     
     /*

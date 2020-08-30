@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F6DA39524FB9163001DC8AC /* RatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6DA39424FB9163001DC8AC /* RatingController.swift */; };
 		4F6F4B8524F5779F009E7687 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6F4B8424F5779F009E7687 /* AppDelegate.swift */; };
 		4F6F4B8724F5779F009E7687 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6F4B8624F5779F009E7687 /* SceneDelegate.swift */; };
 		4F6F4B8C24F5779F009E7687 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F6F4B8A24F5779F009E7687 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		357436228F727A48483AF6A3 /* Pods_books.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_books.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F6DA39424FB9163001DC8AC /* RatingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingController.swift; sourceTree = "<group>"; };
 		4F6F4B8124F5779F009E7687 /* books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = books.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F6F4B8424F5779F009E7687 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F6F4B8624F5779F009E7687 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				4FDAEF3124F945A200DFD5D2 /* Extension.swift */,
 				4FDAEF3324F9AC2A00DFD5D2 /* BookDetailController.swift */,
 				4FDAEF3524FA8FB900DFD5D2 /* FavoritesController.swift */,
+				4F6DA39424FB9163001DC8AC /* RatingController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				4F6F4BAB24F7CBDC009E7687 /* VolumeInfo.swift in Sources */,
 				4FDAEF2E24F92FF900DFD5D2 /* SearchBookCell.swift in Sources */,
 				4FDAEF3224F945A200DFD5D2 /* Extension.swift in Sources */,
+				4F6DA39524FB9163001DC8AC /* RatingController.swift in Sources */,
 				4FDAEF3624FA8FB900DFD5D2 /* FavoritesController.swift in Sources */,
 				4F6F4BA924F7CBA9009E7687 /* Book.swift in Sources */,
 				4F6F4BA624F7C9EF009E7687 /* NetworkController.swift in Sources */,

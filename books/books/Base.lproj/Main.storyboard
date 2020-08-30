@@ -20,6 +20,7 @@
                     <connections>
                         <segue destination="vre-Gv-vAi" kind="relationship" relationship="viewControllers" id="sZR-0q-780"/>
                         <segue destination="wPl-3H-lZ1" kind="relationship" relationship="viewControllers" id="pgS-fG-PMZ"/>
+                        <segue destination="Q0O-6x-aDF" kind="relationship" relationship="viewControllers" id="a1N-dT-AFh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3lu-Wj-FNf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -42,6 +43,89 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="30z-7C-EQB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2487" y="-1848"/>
+        </scene>
+        <!--Rating-->
+        <scene sceneID="wmi-bc-x9r">
+            <objects>
+                <tableViewController id="OSa-O5-cWB" customClass="RatingController" customModule="books" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Q6z-au-FEc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookCell" rowHeight="190" id="C6y-mm-Tpt" customClass="SearchBookCell" customModule="books" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="190"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C6y-mm-Tpt" id="0Qr-qc-3ha">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWq-xb-lDG">
+                                            <rect key="frame" x="118" y="11" width="268" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" misplaced="YES" text="Schrijvers" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIf-iz-lMG">
+                                            <rect key="frame" x="118" y="57" width="268" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="45h-sm-QvZ">
+                                            <rect key="frame" x="10" y="8" width="100" height="174"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="cW4-YT-rtl"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="CWq-xb-lDG" firstAttribute="top" secondItem="0Qr-qc-3ha" secondAttribute="topMargin" id="5zq-ws-Xkb"/>
+                                        <constraint firstItem="45h-sm-QvZ" firstAttribute="top" secondItem="0Qr-qc-3ha" secondAttribute="topMargin" constant="-3" id="FXs-ws-C5d"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="CWq-xb-lDG" secondAttribute="trailing" constant="8" id="HfU-kl-WfO"/>
+                                        <constraint firstItem="45h-sm-QvZ" firstAttribute="leading" secondItem="0Qr-qc-3ha" secondAttribute="leading" constant="10" id="JsG-Ph-I4q"/>
+                                        <constraint firstItem="FIf-iz-lMG" firstAttribute="trailing" secondItem="0Qr-qc-3ha" secondAttribute="trailingMargin" constant="8" id="VQk-TO-diY"/>
+                                        <constraint firstItem="CWq-xb-lDG" firstAttribute="leading" secondItem="45h-sm-QvZ" secondAttribute="trailing" constant="8" symbolic="YES" id="h4x-TQ-z95"/>
+                                        <constraint firstItem="FIf-iz-lMG" firstAttribute="top" secondItem="CWq-xb-lDG" secondAttribute="bottom" constant="25" id="tGr-U2-qct"/>
+                                        <constraint firstItem="FIf-iz-lMG" firstAttribute="leading" secondItem="45h-sm-QvZ" secondAttribute="trailing" constant="8" symbolic="YES" id="u1H-cy-8Gv"/>
+                                        <constraint firstItem="45h-sm-QvZ" firstAttribute="centerY" secondItem="0Qr-qc-3ha" secondAttribute="centerY" id="zqp-jr-q5y"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="authors" destination="FIf-iz-lMG" id="D4H-wd-H15"/>
+                                    <outlet property="bookCover" destination="45h-sm-QvZ" id="pdU-N6-rOh"/>
+                                    <outlet property="bookTitle" destination="CWq-xb-lDG" id="KOH-34-5Q3"/>
+                                    <segue destination="eBO-6f-5Q7" kind="show" identifier="ratedToDetail" id="6nb-np-iQw"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="OSa-O5-cWB" id="v8X-0Y-NVK"/>
+                            <outlet property="delegate" destination="OSa-O5-cWB" id="bLx-Ui-dPS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Rating" id="X9h-hT-yiZ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O2Q-dL-pae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3397" y="-2642"/>
+        </scene>
+        <!--Rating-->
+        <scene sceneID="jDa-T5-KE6">
+            <objects>
+                <navigationController id="Q0O-6x-aDF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Rating" image="star" catalog="system" id="f36-6V-mOQ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jk8-jt-xLQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OSa-O5-cWB" kind="relationship" relationship="rootViewController" id="lk3-yJ-47K"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BUD-pO-0Ev" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2479" y="-2642"/>
         </scene>
         <!--Zoek een boek-->
         <scene sceneID="YKx-Wp-uAg">
@@ -360,12 +444,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1b5-vT-NSb"/>
+        <segue reference="6nb-np-iQw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="star" catalog="system" width="128" height="116"/>
     </resources>
 </document>

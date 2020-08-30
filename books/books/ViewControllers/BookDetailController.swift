@@ -23,7 +23,7 @@ class BookDetailController: UIViewController {
     @IBAction func starButtonTapped(_ sender: UIButton) {
         let tag = sender.tag
         
-        self.setRating(rating: tag)
+        self.setRatingUI(rating: tag)
         
         let tagToSet = sender.tag
         book?.rating = tagToSet
@@ -31,8 +31,6 @@ class BookDetailController: UIViewController {
         self.addRatingToBook()
         
     }
-    
-    
     
     
     var book : Book? = nil
@@ -84,7 +82,7 @@ class BookDetailController: UIViewController {
             self.bookTitle.lineBreakMode = NSLineBreakMode.byWordWrapping
             self.bookTitle.text = book.volumeInfo?.title
             
-            self.getRatingForBook()
+            self.getRatingUI()
             
             bookDescription.numberOfLines = 0
             bookDescription.lineBreakMode = NSLineBreakMode.byWordWrapping
@@ -101,7 +99,7 @@ class BookDetailController: UIViewController {
         }
     }
     
-    private func setRating(rating: Int){
+    private func setRatingUI(rating: Int){
         for button in starButtons {
             if button.tag <= rating{
                 button.setTitle("★", for: .normal)
@@ -111,12 +109,12 @@ class BookDetailController: UIViewController {
         }
     }
     
-    private func getRatingForBook(){
+    private func getRatingUI(){
         DatabaseController.sharedInstance.getRating(bookId: book!.id, completion:{ (rating) in
             if (rating == nil){
                 return
             } else {
-                self.setRating(rating: rating!)
+                self.setRatingUI(rating: rating!)
             }
         })
     }

@@ -51,11 +51,15 @@ class DatabaseController {
         do{
             let realm = try Realm()
             books = realm.objects(BookEntity.self)
+            print(books.count)
+
             completion(books)
         } catch {
             print("something went wrong: " + error.localizedDescription)
             completion(nil)
         }
+        
+        
     }
     
     func removeBook(book: BookEntity, completion: @escaping(Error?) -> Void){
@@ -108,11 +112,21 @@ class DatabaseController {
         }
     }
     
+    func getBooksWithRating(completion: @escaping(Results<BookEntity>?) -> Void){
+        let books: Results<BookEntity>;
+        do {
+            let realm = try! Realm()
+            books = realm.objects(BookEntity.self).filter("rating != 0")
+            print(books.count)
+            
+            completion(books)
+        }
+    }
+    
     func getRating(bookId: String, completion: @escaping(Int?) -> Void){
         do {
             let realm = try! Realm()
             
-            //check if the movieSerieDetail is in the database will be done in the viewController
             let bookFromDb = realm.object(ofType: BookEntity.self, forPrimaryKey: bookId)
             guard let bookFromDbNotNull = bookFromDb else {
                 completion(nil)
@@ -122,5 +136,8 @@ class DatabaseController {
             completion(bookFromDbNotNull.rating)
         }
     }
+    
+    //removeRatingFromBook
 
+    
 }
