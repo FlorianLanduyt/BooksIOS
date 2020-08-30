@@ -23,7 +23,6 @@ extension UICollectionView {
     }
     
     var centerCellIndexPath: IndexPath? {
-        
         if let centerIndexPath = self.indexPathForItem(at: self.centerPoint) {
             return centerIndexPath
         }
@@ -135,15 +134,12 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
             if let ratedBooks = ratedBooks {
                 cellRated.update(with: ratedBooks[indexPath.row].toApiBook())
             }
-            
-            
             return cellRated
         }
         
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //performSegue(withIdentifier: "favoritesToDetail", sender: self)
         if collectionView == self.collectionViewFavorites {
             let detailController = storyboard?.instantiateViewController(identifier: "details") as? BookDetailController
             detailController?.book = favoriteBooks![indexPath.row].toApiBook()

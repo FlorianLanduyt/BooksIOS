@@ -17,7 +17,6 @@ class BookDetailController: UIViewController {
     @IBOutlet var bookDescription: UILabel!
     
     @IBOutlet var removeFavorite: UIImageView!
-        
     @IBOutlet var starButtons: [UIButton]!
     
     @IBAction func starButtonTapped(_ sender: UIButton) {
@@ -65,9 +64,9 @@ class BookDetailController: UIViewController {
     {
         DatabaseController.sharedInstance.inFavorites(id: book!.id, completion: { (bool) in
             if(bool){
-                self.removeBook()
+                self.removeBookFromFavorites()
             } else {
-                self.addBook()
+                self.addBookToFavorites()
             }
         })
     }
@@ -125,7 +124,7 @@ class BookDetailController: UIViewController {
         })
     }
     
-    private func removeBook(){
+    private func removeBookFromFavorites(){
         book?.inFavorites = false
         
         DatabaseController.sharedInstance.addBookToFavorites(book: self.book!.toBookEntity(), completion: {(error) in
@@ -140,7 +139,7 @@ class BookDetailController: UIViewController {
     }
     
     
-    private func addBook(){
+    private func addBookToFavorites(){
         book?.inFavorites = true
         
         DatabaseController.sharedInstance.addBookToFavorites(book: self.book!.toBookEntity(), completion: { (error) in

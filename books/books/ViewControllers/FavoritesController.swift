@@ -24,12 +24,15 @@ class FavoritesController: UITableViewController {
    
     
     override func viewWillAppear(_ animated: Bool) {
+        getFavoriteBooks()
+    }
+    
+    fileprivate func getFavoriteBooks() {
         DatabaseController.sharedInstance.getFavorites(completion: {
             (books) in
             self.books = books
             self.updateTable()
         })
-        
     }
     
     func updateTable(){
@@ -45,7 +48,6 @@ class FavoritesController: UITableViewController {
             }
             return books.count
         } else {
-            
             return 0
         }
     }

@@ -9,7 +9,8 @@
 import UIKit
 import Reachability
 
-
+// When there is nog book to show --> empty view with message
+//SOURCE: https://medium.com/@mtssonmez/handle-empty-tableview-in-swift-4-ios-11-23635d108409
 class SearchBookController: UITableViewController , UISearchResultsUpdating{
     var books : [Book] = []
     let reachability = try! Reachability()
@@ -35,6 +36,8 @@ class SearchBookController: UITableViewController , UISearchResultsUpdating{
 
     
     
+    
+    
     func updateSearchResults(for searchController: UISearchController) {
            if let inputText = searchController.searchBar.text{
                
@@ -43,25 +46,25 @@ class SearchBookController: UITableViewController , UISearchResultsUpdating{
                    self.tableView.reloadData()
                    return
                }
-               
-            NetworkController.sharedInstance.getBooks(searchQuery: inputText, completion: {
-                   (fetchedResult) in
-                   guard let fetchedResult = fetchedResult else {
-                       return
-                   }
-                   
-                    self.books = fetchedResult.books
-                   
-                   DispatchQueue.main.async {
-                       self.tableView.reloadData()
-                   }
-               })
+            getBooks(inputText)
            }
        }
     
+    fileprivate func getBooks(_ inputText: String) {
+        NetworkController.sharedInstance.getBooks(searchQuery: inputText, completion: {
+            (fetchedResult) in
+            guard let fetchedResult = fetchedResult else {
+                return
+            }
+            self.books = fetchedResult.books
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        })
+    }
+    
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
@@ -83,11 +86,6 @@ class SearchBookController: UITableViewController , UISearchResultsUpdating{
         return cell
     }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-//        performSegue(withIdentifier: "showBookDetails", sender: self)
-//        tableView.deselectRow(at: indexPath, animated: true)
-//    }
-//
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? BookDetailController,
