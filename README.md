@@ -15,6 +15,7 @@ If you like to let your friends know about a book that you like, you can share i
 
 - iOS 10.0+
 - Xcode 11.3
+- CocoaPods
 
 ## Installation
 ### 1. Clone this repository
@@ -26,3 +27,5 @@ git clone https://github.com/FlorianLanduyt/BooksIOS.git
 ```bash
 $ pod install
 ```
+
+### 3. Open the project via the books.xsworkspace file, not the books.xcodeproj file
