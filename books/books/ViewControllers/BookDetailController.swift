@@ -120,7 +120,9 @@ class BookDetailController: UIViewController {
     }
     
     private func removeBook(){
-        DatabaseController.sharedInstance.removeBook(book: self.book!.toBookEntity(), completion: {(error) in
+        book?.inFavorites = false
+        
+        DatabaseController.sharedInstance.addBookToFavorites(book: self.book!.toBookEntity(), completion: {(error) in
             if(error == nil){
                 self.setHeartEmpty()
                 self.view.makeToast("Boek verwijderd uit favorieten", duration: 2.0, position: .bottom)
@@ -133,7 +135,9 @@ class BookDetailController: UIViewController {
     
     
     private func addBook(){
-        DatabaseController.sharedInstance.insertBook(book: self.book!.toBookEntity(), completion: { (error) in
+        book?.inFavorites = true
+        
+        DatabaseController.sharedInstance.addBookToFavorites(book: self.book!.toBookEntity(), completion: { (error) in
             if(error == nil){
                 self.setHeartFilled()
                 self.view.makeToast("Boek toegevoegd aan favorieten", duration: 2.0, position: .bottom)

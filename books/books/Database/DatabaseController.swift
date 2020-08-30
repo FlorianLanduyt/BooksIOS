@@ -20,12 +20,19 @@ class DatabaseController {
         Realm.Configuration.defaultConfiguration = config
     }
     
-    func insertBook(book: BookEntity, completion: @escaping(Error?) -> Void){
+    func addBookToFavorites(book: BookEntity, completion: @escaping(Error?) -> Void){
         do {
             let realm = try Realm()
             try realm.write {
-                realm.add(book, update: .modified)
+                let bookFromDb = realm.object(ofType: BookEntity.self, forPrimaryKey: book.id)
+                if let bookFromDb = bookFromDb {
+                    bookFromDb.inFavorites = book.inFavorites
+                    realm.add(bookFromDb, update: .modified)
+                } else {
+                    realm.add(book, update: .modified)
+                }
             }
+            
         } catch let error {
             print("something went wrong")
             completion(error)
@@ -33,11 +40,26 @@ class DatabaseController {
         completion(nil)
     }
     
+    func getFavorites(completion: @escaping(Results<BookEntity>?) -> Void){
+        let favorites: Results<BookEntity>
+        do {
+            let realm = try Realm()
+            favorites = realm.objects(BookEntity.self).filter("inFavorites == true")
+            
+            completion(favorites)
+        } catch {
+            print("something went wrong")
+            completion(nil)
+        }
+    }
+    
     func inFavorites(id : String, completion: @escaping(Bool) -> Void){
         do{
             let realm = try! Realm()
             
-            guard realm.object(ofType: BookEntity.self, forPrimaryKey: id) != nil else
+            let book = realm.object(ofType: BookEntity.self, forPrimaryKey: id)
+            
+            guard book?.inFavorites == true else
             {
                 completion(false)
                 return
@@ -62,23 +84,23 @@ class DatabaseController {
         
     }
     
-    func removeBook(book: BookEntity, completion: @escaping(Error?) -> Void){
-        do{
-            let realm = try Realm()
-            
-            let bookToRemove: BookEntity? = realm.object(ofType: BookEntity.self, forPrimaryKey: book.id)
-            if let bookToRemove = bookToRemove {
-                try realm.write {
-                    realm.delete(bookToRemove)
-                }
-            }
-        } catch let error {
-            print("something went wrong")
-            completion(error)
-        }
-        
-        completion(nil)
-    }
+//    func removeBook(book: BookEntity, completion: @escaping(Error?) -> Void){
+//        do{
+//            let realm = try Realm()
+//
+//            let bookToRemove: BookEntity? = realm.object(ofType: BookEntity.self, forPrimaryKey: book.id)
+//            if let bookToRemove = bookToRemove {
+//                try realm.write {
+//                    realm.delete(bookToRemove)
+//                }
+//            }
+//        } catch let error {
+//            print("something went wrong")
+//            completion(error)
+//        }
+//
+//        completion(nil)
+//    }
     func removeAllBooks(completion: @escaping(Error?) -> Void){
         do{
             let realm = try Realm()

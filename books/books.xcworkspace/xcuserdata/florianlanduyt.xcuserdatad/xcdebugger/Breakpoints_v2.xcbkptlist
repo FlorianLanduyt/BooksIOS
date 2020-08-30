@@ -397,8 +397,8 @@
             filePath = "books/Database/DatabaseController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "getBooksWithRating(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -413,8 +413,8 @@
             filePath = "books/Database/DatabaseController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "getAll(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -448,6 +448,70 @@
             startingLineNumber = "79"
             endingLineNumber = "79"
             landmarkName = "setRatingToZero(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8AFB4097-AE78-4FDA-97CC-B318C2DA0F3C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "books/Database/DatabaseController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "addBookToFavorites(book:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8AFB4097-AE78-4FDA-97CC-B318C2DA0F3C - 37435fcafea86057"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "books.DatabaseController.addBookToFavorites(book: books.BookEntity, completion: (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "books"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/florianlanduyt/Documents/TIN/2019-2020/Herexamens/iOS/Books/books/books/Database/DatabaseController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "246">
+               </Location>
+               <Location
+                  uuid = "8AFB4097-AE78-4FDA-97CC-B318C2DA0F3C - c350afc8a220726a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in books.DatabaseController.addBookToFavorites(book: books.BookEntity, completion: (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "books"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/florianlanduyt/Documents/TIN/2019-2020/Herexamens/iOS/Books/books/books/Database/DatabaseController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "41">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "45E3C43E-8EB6-4354-810E-203A7931397C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "books/Database/DatabaseController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "addBookToFavorites(book:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

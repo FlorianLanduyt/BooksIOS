@@ -24,7 +24,7 @@ class FavoritesController: UITableViewController {
    
     
     override func viewWillAppear(_ animated: Bool) {
-        DatabaseController.sharedInstance.getAll(completion: {
+        DatabaseController.sharedInstance.getFavorites(completion: {
             (books) in
             self.books = books
             self.updateTable()
@@ -62,8 +62,10 @@ class FavoritesController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            let book = books![indexPath.row].toApiBook()
+            book.inFavorites = false
             
-            DatabaseController.sharedInstance.removeBook(book: books![indexPath.row], completion: { (error) in
+            DatabaseController.sharedInstance.addBookToFavorites(book: book.toBookEntity(), completion: { (error) in
                 if(error == nil){
                     self.view.makeToast("Boek verwijderd uit favorieten", duration: 2.0, position: .bottom)
                 } else {
